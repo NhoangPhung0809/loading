@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xưởng Loading</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-title">
+      <span class="mark" aria-hidden="true"></span>
+      <h1>Xưởng Loading</h1>
+    </div>
+    <p class="topbar-sub">16 hiệu ứng loading thuần CSS &amp; HTML — bấm <strong>Xem code</strong> dưới mỗi ô để lấy khối HTML+CSS, sẵn nút Copy.</p>
+    <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">
+      Tạm dừng chuyển động
+    </button>
+  </header>
+
+  <main class="wrap">
+
+    <section class="category" aria-labelledby="cat-bars">
+      <h2 id="cat-bars"><span class="cat-index">01</span>Thanh tiến trình</h2>
+      <div class="grid">
+
+        <article class="demo-card" data-key="sweep">
+          <div class="stage">
+            <div class="bar-track">
+              <div class="bar-sweep" role="status" aria-label="Đang tải"></div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Sweep Gradient</span>
+            <span class="demo-tag">indeterminate</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="stripes">
+          <div class="stage">
+            <div class="bar-track">
+              <div class="bar-stripes" role="status" aria-label="Đang tải"></div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Striped Fill</span>
+            <span class="demo-tag">looping</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="segments">
+          <div class="stage">
+            <div class="segments" role="status" aria-label="Đang tải">
+              <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i>
+              <i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i>
+              <i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i>
+              <i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i><i style="--i:18"></i><i style="--i:19"></i>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Segmented Steps</span>
+            <span class="demo-tag">looping</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="glow">
+          <div class="stage">
+            <div class="bar-track glow-track">
+              <div class="bar-glow" role="status" aria-label="Đang tải"></div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Neon Pulse</span>
+            <span class="demo-tag">looping</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="category" aria-labelledby="cat-spinners">
+      <h2 id="cat-spinners"><span class="cat-index">02</span>Vòng xoay (spinner)</h2>
+      <div class="grid">
+
+        <article class="demo-card" data-key="ring-classic">
+          <div class="stage">
+            <div class="spinner-ring" role="status" aria-label="Đang tải"></div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Classic Ring</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="ring-dual">
+          <div class="stage">
+            <div class="spinner-dual" role="status" aria-label="Đang tải">
+              <span></span><span></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Dual Ring</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="ring-dash">
+          <div class="stage">
+            <div class="spinner-dash" role="status" aria-label="Đang tải"></div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Dashed Arc</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="ring-orbit">
+          <div class="stage">
+            <div class="spinner-orbit" role="status" aria-label="Đang tải">
+              <span class="orbit-dot"></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Orbit Dot</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="category" aria-labelledby="cat-dots">
+      <h2 id="cat-dots"><span class="cat-index">03</span>Chấm &amp; nhịp đập</h2>
+      <div class="grid">
+
+        <article class="demo-card" data-key="dots-bounce">
+          <div class="stage">
+            <div class="dots-bounce" role="status" aria-label="Đang tải">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Bouncing Dots</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="dots-fade">
+          <div class="stage">
+            <div class="dots-fade" role="status" aria-label="Đang tải">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Fading Dots</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="wave">
+          <div class="stage">
+            <div class="wave-bars" role="status" aria-label="Đang tải">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Wave Bars</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="ping">
+          <div class="stage">
+            <div class="ping" role="status" aria-label="Đang tải">
+              <span class="ping-ripple"></span>
+              <span class="ping-core"></span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Radar Ping</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="category" aria-labelledby="cat-skeleton">
+      <h2 id="cat-skeleton"><span class="cat-index">04</span>Khung xương (skeleton)</h2>
+      <div class="grid grid-wide">
+
+        <article class="demo-card" data-key="sk-text">
+          <div class="stage stage-left">
+            <div class="skeleton-text" role="status" aria-label="Đang tải nội dung">
+              <div class="sk-line sk-w80"></div>
+              <div class="sk-line sk-w100"></div>
+              <div class="sk-line sk-w60"></div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Text Skeleton</span>
+            <span class="demo-tag">shimmer</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="sk-card">
+          <div class="stage stage-left">
+            <div class="skeleton-card" role="status" aria-label="Đang tải thẻ nội dung">
+              <div class="sk-thumb"></div>
+              <div class="sk-body">
+                <div class="sk-line sk-w70"></div>
+                <div class="sk-line sk-w40"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Card Skeleton</span>
+            <span class="demo-tag">shimmer</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="category" aria-labelledby="cat-progress">
+      <h2 id="cat-progress"><span class="cat-index">05</span>Tiến trình theo phần trăm</h2>
+      <div class="grid">
+
+        <article class="demo-card" data-key="pct-ring">
+          <div class="stage">
+            <div class="ring-pct" id="ring-pct" style="--pct:0" role="status" aria-live="polite">
+              <span id="ring-pct-label">0%</span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Circular Percent</span>
+            <span class="demo-tag">JS + conic-gradient</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="pct-bar">
+          <div class="stage">
+            <div class="bar-pct-wrap">
+              <div class="bar-track">
+                <div class="bar-pct-fill" id="bar-pct-fill" style="width:0%"></div>
+              </div>
+              <span class="bar-pct-label" id="bar-pct-label" aria-live="polite">0%</span>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Linear Percent</span>
+            <span class="demo-tag">JS driven</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  
+  </main>
+
+  <footer class="page-footer">
+    <p>các bạn dùng thoải mái</p>
+    <p class="credit">Thực hiện bởi H.Phụng</p>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ---------- reusable, self-contained snippets ---------- */
+      var SNIPPETS = {
+        sweep: {
+          html: '<div class="ld-bar">\n  <div class="ld-bar__sweep"></div>\n</div>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n  --track: #d8d2c6;\n}\n\n.ld-bar {\n  width: 100%;\n  height: 8px;\n  border-radius: 100px;\n  background: var(--track);\n  overflow: hidden;\n  position: relative;\n}\n\n.ld-bar__sweep {\n  position: absolute;\n  inset: 0;\n  background: linear-gradient(90deg, transparent, var(--accent-2), transparent);\n  background-size: 45% 100%;\n  animation: ld-sweep 1.5s linear infinite;\n}\n\n@keyframes ld-sweep {\n  from { background-position: -60% 0; }\n  to   { background-position: 160% 0; }\n}'
+        },
+        stripes: {
+          html: '<div class="ld-bar">\n  <div class="ld-bar__stripes"></div>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --track: #d8d2c6;\n}\n\n.ld-bar {\n  width: 100%;\n  height: 8px;\n  border-radius: 100px;\n  background: var(--track);\n  overflow: hidden;\n  position: relative;\n}\n\n.ld-bar__stripes {\n  position: absolute;\n  inset: 0;\n  width: 0%;\n  border-radius: 100px;\n  background-color: var(--accent);\n  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.28) 0 8px, transparent 8px 16px);\n  animation: ld-fill-loop 2.4s ease-in-out infinite, ld-stripe-scroll 0.6s linear infinite;\n}\n\n@keyframes ld-fill-loop {\n  0%   { width: 0%; }\n  70%  { width: 100%; }\n  100% { width: 100%; }\n}\n\n@keyframes ld-stripe-scroll {\n  to { background-position: 16px 0; }\n}'
+        },
+        segments: {
+          html: '<div class="ld-segments">\n  <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i>\n  <i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i>\n</div>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n  --track: #d8d2c6;\n}\n\n.ld-segments {\n  display: flex;\n  gap: 3px;\n  height: 10px;\n}\n\n.ld-segments i {\n  flex: 1;\n  border-radius: 1px;\n  background: var(--track);\n  font-style: normal;\n  animation: ld-seg-light 2s ease-in-out infinite;\n  animation-delay: calc(var(--i) * 0.05s);\n}\n\n@keyframes ld-seg-light {\n  0%, 100% { background: var(--track); }\n  50%      { background: var(--accent-2); }\n}'
+        },
+        glow: {
+          html: '<div class="ld-bar">\n  <div class="ld-bar__glow"></div>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --track: #d8d2c6;\n}\n\n.ld-bar {\n  width: 100%;\n  height: 8px;\n  border-radius: 100px;\n  background: var(--track);\n  overflow: hidden;\n  position: relative;\n}\n\n.ld-bar__glow {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: -55%;\n  width: 55%;\n  border-radius: 100px;\n  background: var(--accent);\n  box-shadow: 0 0 12px 2px color-mix(in srgb, var(--accent) 70%, transparent);\n  animation: ld-glow-slide 1.8s ease-in-out infinite;\n}\n\n@keyframes ld-glow-slide {\n  0%   { left: -55%; }\n  100% { left: 100%; }\n}'
+        },
+        "ring-classic": {
+          html: '<div class="ld-spinner"></div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --track: #d8d2c6;\n}\n\n.ld-spinner {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  border: 4px solid var(--track);\n  border-top-color: var(--accent);\n  animation: ld-spin 0.8s linear infinite;\n}\n\n@keyframes ld-spin {\n  to { transform: rotate(360deg); }\n}'
+        },
+        "ring-dual": {
+          html: '<div class="ld-spinner-dual">\n  <span></span>\n  <span></span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n}\n\n.ld-spinner-dual {\n  width: 44px;\n  height: 44px;\n  position: relative;\n}\n\n.ld-spinner-dual span {\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  border: 4px solid transparent;\n}\n\n.ld-spinner-dual span:nth-child(1) {\n  border-top-color: var(--accent);\n  border-bottom-color: var(--accent);\n  animation: ld-spin 1s linear infinite;\n}\n\n.ld-spinner-dual span:nth-child(2) {\n  inset: 8px;\n  border-left-color: var(--accent-2);\n  border-right-color: var(--accent-2);\n  animation: ld-spin-rev 0.7s linear infinite;\n}\n\n@keyframes ld-spin { to { transform: rotate(360deg); } }\n@keyframes ld-spin-rev { to { transform: rotate(-360deg); } }'
+        },
+        "ring-dash": {
+          html: '<div class="ld-spinner-dash"></div>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n}\n\n.ld-spinner-dash {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  border: 4px dashed var(--accent-2);\n  animation: ld-spin 3s linear infinite;\n}\n\n@keyframes ld-spin {\n  to { transform: rotate(360deg); }\n}'
+        },
+        "ring-orbit": {
+          html: '<div class="ld-spinner-orbit">\n  <span class="ld-spinner-orbit__dot"></span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --track: #d8d2c6;\n}\n\n.ld-spinner-orbit {\n  width: 44px;\n  height: 44px;\n  position: relative;\n}\n\n.ld-spinner-orbit::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  border: 2px solid var(--track);\n}\n\n.ld-spinner-orbit__dot {\n  position: absolute;\n  top: -3px;\n  left: 50%;\n  width: 8px;\n  height: 8px;\n  margin-left: -4px;\n  border-radius: 50%;\n  background: var(--accent);\n  box-shadow: 0 0 8px 1px color-mix(in srgb, var(--accent) 60%, transparent);\n  transform-origin: 4px 25px;\n  animation: ld-spin 1.1s linear infinite;\n}\n\n@keyframes ld-spin {\n  to { transform: rotate(360deg); }\n}'
+        },
+        "dots-bounce": {
+          html: '<div class="ld-dots">\n  <span></span>\n  <span></span>\n  <span></span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n}\n\n.ld-dots {\n  display: flex;\n  gap: 7px;\n  align-items: flex-end;\n  height: 26px;\n}\n\n.ld-dots span {\n  width: 9px;\n  height: 9px;\n  border-radius: 50%;\n  background: var(--accent);\n  animation: ld-dot-bounce 0.9s ease-in-out infinite;\n}\n\n.ld-dots span:nth-child(2) { animation-delay: 0.12s; background: var(--accent-2); }\n.ld-dots span:nth-child(3) { animation-delay: 0.24s; }\n\n@keyframes ld-dot-bounce {\n  0%, 80%, 100% { transform: translateY(0); }\n  40%           { transform: translateY(-14px); }\n}'
+        },
+        "dots-fade": {
+          html: '<div class="ld-dots ld-dots--fade">\n  <span></span>\n  <span></span>\n  <span></span>\n</div>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n}\n\n.ld-dots--fade {\n  display: flex;\n  gap: 8px;\n}\n\n.ld-dots--fade span {\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  background: var(--accent-2);\n  animation: ld-dot-fade 1.2s ease-in-out infinite;\n}\n\n.ld-dots--fade span:nth-child(2) { animation-delay: 0.2s; }\n.ld-dots--fade span:nth-child(3) { animation-delay: 0.4s; }\n\n@keyframes ld-dot-fade {\n  0%, 100% { opacity: 0.2; transform: scale(0.85); }\n  50%      { opacity: 1; transform: scale(1); }\n}'
+        },
+        wave: {
+          html: '<div class="ld-wave">\n  <span></span><span></span><span></span><span></span><span></span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n}\n\n.ld-wave {\n  display: flex;\n  gap: 4px;\n  align-items: center;\n  height: 34px;\n}\n\n.ld-wave span {\n  width: 5px;\n  height: 10px;\n  border-radius: 3px;\n  background: var(--accent);\n  animation: ld-wave-scale 1s ease-in-out infinite;\n}\n\n.ld-wave span:nth-child(1) { animation-delay: -0.9s; }\n.ld-wave span:nth-child(2) { animation-delay: -0.7s; }\n.ld-wave span:nth-child(3) { animation-delay: -0.5s; background: var(--accent-2); }\n.ld-wave span:nth-child(4) { animation-delay: -0.3s; }\n.ld-wave span:nth-child(5) { animation-delay: -0.1s; }\n\n@keyframes ld-wave-scale {\n  0%, 100% { height: 10px; }\n  50%      { height: 32px; }\n}'
+        },
+        ping: {
+          html: '<div class="ld-ping">\n  <span class="ld-ping__ripple"></span>\n  <span class="ld-ping__core"></span>\n</div>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n}\n\n.ld-ping {\n  position: relative;\n  width: 40px;\n  height: 40px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.ld-ping__ripple {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  background: var(--accent-2);\n  opacity: 0.5;\n  animation: ld-ping-out 1.6s cubic-bezier(0,0,0.2,1) infinite;\n}\n\n.ld-ping__core {\n  position: relative;\n  width: 14px;\n  height: 14px;\n  border-radius: 50%;\n  background: var(--accent-2);\n}\n\n@keyframes ld-ping-out {\n  0%   { transform: scale(0.3); opacity: 0.6; }\n  100% { transform: scale(1.6); opacity: 0; }\n}'
+        },
+        "sk-text": {
+          html: '<div class="ld-skeleton">\n  <div class="ld-skeleton__line" style="width:80%"></div>\n  <div class="ld-skeleton__line" style="width:100%"></div>\n  <div class="ld-skeleton__line" style="width:60%"></div>\n</div>',
+          css: ':root {\n  --track: #d8d2c6;\n  --surface-2: #ece8e1;\n}\n\n.ld-skeleton {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n\n.ld-skeleton__line {\n  height: 12px;\n  border-radius: 5px;\n  background: linear-gradient(100deg, var(--track) 30%, var(--surface-2) 50%, var(--track) 70%);\n  background-size: 220% 100%;\n  animation: ld-shimmer 1.4s ease-in-out infinite;\n}\n\n@keyframes ld-shimmer {\n  0%   { background-position: 120% 0; }\n  100% { background-position: -20% 0; }\n}'
+        },
+        "sk-card": {
+          html: '<div class="ld-skeleton-card">\n  <div class="ld-skeleton-card__thumb"></div>\n  <div class="ld-skeleton">\n    <div class="ld-skeleton__line" style="width:70%"></div>\n    <div class="ld-skeleton__line" style="width:40%"></div>\n  </div>\n</div>',
+          css: ':root {\n  --track: #d8d2c6;\n  --surface-2: #ece8e1;\n}\n\n.ld-skeleton-card {\n  display: flex;\n  gap: 12px;\n  align-items: center;\n}\n\n.ld-skeleton-card__thumb {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  flex: none;\n  background: linear-gradient(100deg, var(--track) 30%, var(--surface-2) 50%, var(--track) 70%);\n  background-size: 220% 100%;\n  animation: ld-shimmer 1.4s ease-in-out infinite;\n}\n\n.ld-skeleton {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 9px;\n}\n\n.ld-skeleton__line {\n  height: 12px;\n  border-radius: 5px;\n  background: linear-gradient(100deg, var(--track) 30%, var(--surface-2) 50%, var(--track) 70%);\n  background-size: 220% 100%;\n  animation: ld-shimmer 1.4s ease-in-out infinite;\n}\n\n@keyframes ld-shimmer {\n  0%   { background-position: 120% 0; }\n  100% { background-position: -20% 0; }\n}'
+        },
+        "pct-ring": {
+          html: '<div class="ld-ring-progress" id="ldRing" style="--pct:0">\n  <span id="ldRingLabel">0%</span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --track: #d8d2c6;\n  --stage-bg: #ffffff;\n}\n\n.ld-ring-progress {\n  --pct: 0;\n  width: 64px;\n  height: 64px;\n  border-radius: 50%;\n  background: conic-gradient(var(--accent) calc(var(--pct) * 1%), var(--track) 0);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 12px;\n}\n\n.ld-ring-progress span {\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  background: var(--stage-bg);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}',
+          js: 'var ring = document.getElementById("ldRing");\nvar label = document.getElementById("ldRingLabel");\nvar value = 0, dir = 1;\nsetInterval(function () {\n  value += dir;\n  if (value >= 100) dir = -1;\n  if (value <= 0) dir = 1;\n  ring.style.setProperty("--pct", value);\n  label.textContent = value + "%";\n}, 45);'
+        },
+        "pct-bar": {
+          html: '<div class="ld-bar-progress">\n  <div class="ld-bar">\n    <div class="ld-bar__fill" id="ldBarFill" style="width:0%"></div>\n  </div>\n  <span id="ldBarLabel">0%</span>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n  --track: #d8d2c6;\n}\n\n.ld-bar-progress {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.ld-bar {\n  flex: 1;\n  height: 8px;\n  border-radius: 100px;\n  background: var(--track);\n  overflow: hidden;\n}\n\n.ld-bar__fill {\n  height: 100%;\n  border-radius: 100px;\n  background: linear-gradient(90deg, var(--accent-2), var(--accent));\n}',
+          js: 'var fill = document.getElementById("ldBarFill");\nvar label = document.getElementById("ldBarLabel");\nvar value = 0, dir = 1;\nsetInterval(function () {\n  value += dir;\n  if (value >= 100) dir = -1;\n  if (value <= 0) dir = 1;\n  fill.style.width = value + "%";\n  label.textContent = value + "%";\n}, 45);'
+        }
+      };
+
+      function buildSnippetText(entry) {
+        var out = "<!-- HTML -->\n" + entry.html + "\n\n/* CSS */\n" + entry.css;
+        if (entry.js) out += "\n\n// JS\n" + entry.js;
+        return out;
+      }
+
+      document.querySelectorAll(".demo-card").forEach(function (card) {
+        var key = card.getAttribute("data-key");
+        var entry = SNIPPETS[key];
+        var codeEl = card.querySelector(".snippet code");
+        if (entry && codeEl) {
+          codeEl.textContent = buildSnippetText(entry);
+        }
+
+        var toggleBtn = card.querySelector(".code-toggle");
+        var panel = card.querySelector(".code-panel");
+        toggleBtn.addEventListener("click", function () {
+          var isOpen = panel.hidden === false;
+          panel.hidden = isOpen;
+          toggleBtn.setAttribute("aria-expanded", String(!isOpen));
+        });
+
+        var copyBtn = card.querySelector(".copy-btn");
+        copyBtn.addEventListener("click", function () {
+          var text = codeEl.textContent;
+          function showCopied() {
+            copyBtn.textContent = "Đã copy";
+            copyBtn.classList.add("copied");
+            setTimeout(function () {
+              copyBtn.textContent = "Copy";
+              copyBtn.classList.remove("copied");
+            }, 1400);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(showCopied, function () {
+              fallbackCopy(text, showCopied);
+            });
+          } else {
+            fallbackCopy(text, showCopied);
+          }
+        });
+      });
+
+      function fallbackCopy(text, done) {
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+          done();
+        } catch (e) {
+          /* clipboard unavailable in this context; nothing more to do */
+        }
+      }
+
+      /* ---------- global motion toggle ---------- */
+      var motionBtn = document.getElementById("motion-toggle");
+      var paused = false;
+      var pctTimer = null;
+
+      motionBtn.addEventListener("click", function () {
+        paused = !paused;
+        document.body.classList.toggle("motion-paused", paused);
+        motionBtn.setAttribute("aria-pressed", String(paused));
+        motionBtn.textContent = paused ? "Tiếp tục chuyển động" : "Tạm dừng chuyển động";
+        if (paused) {
+          if (pctTimer) clearInterval(pctTimer);
+        } else {
+          startPctLoop();
+        }
+      });
+
+      /* ---------- live percent demos on the page itself ---------- */
+      var ring = document.getElementById("ring-pct");
+      var ringLabel = document.getElementById("ring-pct-label");
+      var barFill = document.getElementById("bar-pct-fill");
+      var barLabel = document.getElementById("bar-pct-label");
+
+      function startPctLoop() {
+        var value = 0;
+        var dir = 1;
+        pctTimer = setInterval(function () {
+          value += dir;
+          if (value >= 100) { value = 100; dir = -1; }
+          if (value <= 0) { value = 0; dir = 1; }
+          ring.style.setProperty("--pct", value);
+          ringLabel.textContent = value + "%";
+          barFill.style.width = value + "%";
+          barLabel.textContent = value + "%";
+        }, 45);
+      }
+
+      startPctLoop();
+    })();
+  </script>
+
+</body>
+</html>
