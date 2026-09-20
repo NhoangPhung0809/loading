@@ -46,6 +46,11 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
+/* keep our own colors on buttons/links even under OS/browser forced-colors
+   (Windows high-contrast, "force dark pages") — every control here already
+   has deliberate, accessible contrast of its own */
+button, a { forced-color-adjust: none; }
+
 html, body {
   margin: 0;
   background: var(--bg);
