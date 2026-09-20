@@ -16,13 +16,20 @@
       <span class="mark" aria-hidden="true"></span>
       <h1>Xưởng Loading</h1>
     </div>
-    <p class="topbar-sub">16 hiệu ứng loading thuần CSS &amp; HTML — bấm <strong>Xem code</strong> dưới mỗi ô để lấy khối HTML+CSS, sẵn nút Copy.</p>
+    <p class="topbar-sub">24 hiệu ứng CSS &amp; HTML — bấm <strong>Xem code</strong> dưới mỗi ô để lấy khối HTML+CSS, sẵn nút Copy.</p>
     <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">
       Tạm dừng chuyển động
     </button>
   </header>
 
+  <div class="tabs" role="tablist" aria-label="Chuyển nhóm hiệu ứng">
+    <button class="tab" id="tab-loading" role="tab" type="button" aria-selected="true" aria-controls="panel-loading">Hiệu ứng Loading</button>
+    <button class="tab" id="tab-hover" role="tab" type="button" aria-selected="false" aria-controls="panel-hover" tabindex="-1">Hiệu ứng di chuột</button>
+  </div>
+
   <main class="wrap">
+
+  <div id="panel-loading" role="tabpanel" aria-labelledby="tab-loading">
 
     <section class="category" aria-labelledby="cat-bars">
       <h2 id="cat-bars"><span class="cat-index">01</span>Thanh tiến trình</h2>
@@ -420,7 +427,180 @@
       </div>
     </section>
 
-  
+  </div>
+
+  <div id="panel-hover" role="tabpanel" aria-labelledby="tab-hover" hidden>
+
+    <section class="category" aria-labelledby="cat-hover">
+      <h2 id="cat-hover"><span class="cat-index">06</span>Hiệu ứng di chuột</h2>
+      <div class="grid">
+
+        <article class="demo-card" data-key="hv-spotlight">
+          <div class="stage stage-fill">
+            <div class="hv-spotlight" id="hvSpotlight"><span>Rê chuột vào đây</span></div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Spotlight Card</span>
+            <span class="demo-tag">JS mousemove</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-tilt">
+          <div class="stage">
+            <div class="hv-tilt-wrap" id="hvTiltWrap">
+              <div class="hv-tilt" id="hvTilt"><span>Tilt 3D</span></div>
+            </div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Tilt 3D Card</span>
+            <span class="demo-tag">JS mousemove</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-magnet">
+          <div class="stage" id="hvMagnetStage">
+            <button class="hv-magnet" id="hvMagnet" type="button">Hover me</button>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Magnetic Button</span>
+            <span class="demo-tag">JS mousemove</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-ripple">
+          <div class="stage">
+            <button class="hv-ripple" id="hvRipple" type="button">Click tôi</button>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Ripple Click</span>
+            <span class="demo-tag">JS click</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS + JS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-underline">
+          <div class="stage">
+            <a class="hv-underline" href="#" onclick="return false;">Xem thêm</a>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Underline Draw</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-zoom">
+          <div class="stage stage-fill">
+            <div class="hv-zoom"><div class="hv-zoom__img"></div></div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Image Zoom Reveal</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-sweep">
+          <div class="stage">
+            <button class="hv-sweep" type="button"><span>Đăng ký</span></button>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Fill Sweep Button</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+        <article class="demo-card" data-key="hv-neon">
+          <div class="stage">
+            <div class="hv-neon"><span>Hover để xem</span></div>
+          </div>
+          <div class="demo-meta">
+            <span class="demo-name">Neon Border Trace</span>
+            <span class="demo-tag">CSS only</span>
+          </div>
+          <button class="code-toggle" type="button" aria-expanded="false">
+            <span>&lt;/&gt; Xem code</span><span class="chevron" aria-hidden="true">⌄</span>
+          </button>
+          <div class="code-panel" hidden>
+            <div class="code-panel-head">
+              <span class="code-panel-label">HTML + CSS</span>
+              <button class="copy-btn" type="button">Copy</button>
+            </div>
+            <pre class="snippet"><code></code></pre>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
   </main>
 
   <footer class="page-footer">
@@ -499,6 +679,42 @@
           html: '<div class="ld-bar-progress">\n  <div class="ld-bar">\n    <div class="ld-bar__fill" id="ldBarFill" style="width:0%"></div>\n  </div>\n  <span id="ldBarLabel">0%</span>\n</div>',
           css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n  --track: #d8d2c6;\n}\n\n.ld-bar-progress {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.ld-bar {\n  flex: 1;\n  height: 8px;\n  border-radius: 100px;\n  background: var(--track);\n  overflow: hidden;\n}\n\n.ld-bar__fill {\n  height: 100%;\n  border-radius: 100px;\n  background: linear-gradient(90deg, var(--accent-2), var(--accent));\n}',
           js: 'var fill = document.getElementById("ldBarFill");\nvar label = document.getElementById("ldBarLabel");\nvar value = 0, dir = 1;\nsetInterval(function () {\n  value += dir;\n  if (value >= 100) dir = -1;\n  if (value <= 0) dir = 1;\n  fill.style.width = value + "%";\n  label.textContent = value + "%";\n}, 45);'
+        },
+        "hv-spotlight": {
+          html: '<div class="hv-spotlight" id="hvSpotlight">\n  <span>Rê chuột vào đây</span>\n</div>',
+          css: ':root {\n  --stage: #e4dfd6;\n}\n\n.hv-spotlight {\n  --x: 50%;\n  --y: 50%;\n  position: relative;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: var(--stage);\n  color: #8d8378;\n  font-size: 12px;\n}\n\n.hv-spotlight::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: radial-gradient(160px circle at var(--x) var(--y), rgba(255,255,255,0.5), transparent 60%);\n  opacity: 0;\n  transition: opacity 0.25s;\n}\n\n.hv-spotlight:hover::before {\n  opacity: 1;\n}',
+          js: 'var spotlight = document.getElementById("hvSpotlight");\nspotlight.addEventListener("mousemove", function (e) {\n  var r = spotlight.getBoundingClientRect();\n  spotlight.style.setProperty("--x", (e.clientX - r.left) + "px");\n  spotlight.style.setProperty("--y", (e.clientY - r.top) + "px");\n});'
+        },
+        "hv-tilt": {
+          html: '<div class="hv-tilt-wrap" id="hvTiltWrap">\n  <div class="hv-tilt" id="hvTilt"><span>Tilt 3D</span></div>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n}\n\n.hv-tilt-wrap {\n  perspective: 600px;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.hv-tilt {\n  width: 120px;\n  height: 80px;\n  border-radius: 10px;\n  background: linear-gradient(135deg, var(--accent), var(--accent-2));\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #fff;\n  font-size: 12px;\n  font-weight: 600;\n  transform: rotateX(0deg) rotateY(0deg);\n  transition: transform 0.15s ease-out;\n}',
+          js: 'var tiltWrap = document.getElementById("hvTiltWrap");\nvar tilt = document.getElementById("hvTilt");\ntiltWrap.addEventListener("mousemove", function (e) {\n  var r = tiltWrap.getBoundingClientRect();\n  var px = (e.clientX - r.left) / r.width - 0.5;\n  var py = (e.clientY - r.top) / r.height - 0.5;\n  tilt.style.transform = "rotateX(" + (py * -18) + "deg) rotateY(" + (px * 18) + "deg)";\n});\ntiltWrap.addEventListener("mouseleave", function () {\n  tilt.style.transform = "rotateX(0deg) rotateY(0deg)";\n});'
+        },
+        "hv-magnet": {
+          html: '<div id="hvMagnetStage">\n  <button class="hv-magnet" id="hvMagnet" type="button">Hover me</button>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n}\n\n.hv-magnet {\n  padding: 10px 22px;\n  border-radius: 100px;\n  border: none;\n  background: var(--accent);\n  color: #fff;\n  font-weight: 600;\n  cursor: pointer;\n  transition: transform 0.15s ease-out;\n}',
+          js: 'var magnetStage = document.getElementById("hvMagnetStage");\nvar magnet = document.getElementById("hvMagnet");\nmagnetStage.addEventListener("mousemove", function (e) {\n  var r = magnet.getBoundingClientRect();\n  var cx = r.left + r.width / 2;\n  var cy = r.top + r.height / 2;\n  var dx = (e.clientX - cx) * 0.3;\n  var dy = (e.clientY - cy) * 0.3;\n  magnet.style.transform = "translate(" + dx + "px, " + dy + "px)";\n});\nmagnetStage.addEventListener("mouseleave", function () {\n  magnet.style.transform = "translate(0, 0)";\n});'
+        },
+        "hv-ripple": {
+          html: '<button class="hv-ripple" id="hvRipple" type="button">Click tôi</button>',
+          css: ':root {\n  --accent-2: #1f9aa8;\n}\n\n.hv-ripple {\n  position: relative;\n  overflow: hidden;\n  padding: 10px 24px;\n  border-radius: 8px;\n  border: none;\n  background: var(--accent-2);\n  color: #fff;\n  font-weight: 600;\n  cursor: pointer;\n}\n\n.hv-ripple .ripple-dot {\n  position: absolute;\n  border-radius: 50%;\n  background: rgba(255,255,255,0.55);\n  transform: scale(0);\n  animation: hv-ripple-anim 0.6s ease-out;\n  pointer-events: none;\n}\n\n@keyframes hv-ripple-anim {\n  to { transform: scale(1); opacity: 0; }\n}',
+          js: 'var rippleBtn = document.getElementById("hvRipple");\nrippleBtn.addEventListener("click", function (e) {\n  var r = rippleBtn.getBoundingClientRect();\n  var size = Math.max(r.width, r.height) * 2;\n  var dot = document.createElement("span");\n  dot.className = "ripple-dot";\n  dot.style.width = size + "px";\n  dot.style.height = size + "px";\n  dot.style.left = (e.clientX - r.left - size / 2) + "px";\n  dot.style.top = (e.clientY - r.top - size / 2) + "px";\n  rippleBtn.appendChild(dot);\n  dot.addEventListener("animationend", function () { dot.remove(); });\n});'
+        },
+        "hv-underline": {
+          html: '<a class="hv-underline" href="#">Xem thêm</a>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --text: #201d18;\n}\n\n.hv-underline {\n  position: relative;\n  color: var(--text);\n  text-decoration: none;\n  font-weight: 600;\n  font-size: 14px;\n}\n\n.hv-underline::after {\n  content: "";\n  position: absolute;\n  left: 0;\n  bottom: -2px;\n  width: 100%;\n  height: 2px;\n  background: var(--accent);\n  transform: scaleX(0);\n  transform-origin: left;\n  transition: transform 0.25s ease;\n}\n\n.hv-underline:hover::after {\n  transform: scaleX(1);\n}'
+        },
+        "hv-zoom": {
+          html: '<div class="hv-zoom">\n  <div class="hv-zoom__img"></div>\n</div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n}\n\n.hv-zoom {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n}\n\n.hv-zoom__img {\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(135deg, var(--accent-2), var(--accent));\n  transition: transform 0.4s ease;\n}\n\n.hv-zoom:hover .hv-zoom__img {\n  transform: scale(1.15);\n}'
+        },
+        "hv-sweep": {
+          html: '<button class="hv-sweep" type="button"><span>Đăng ký</span></button>',
+          css: ':root {\n  --accent: #ff6a3d;\n}\n\n.hv-sweep {\n  position: relative;\n  z-index: 0;\n  padding: 10px 22px;\n  border-radius: 8px;\n  border: 1.5px solid var(--accent);\n  background: transparent;\n  color: var(--accent);\n  font-weight: 600;\n  overflow: hidden;\n  cursor: pointer;\n}\n\n.hv-sweep::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  z-index: -1;\n  background: var(--accent);\n  transform: translateX(-100%);\n  transition: transform 0.3s ease;\n}\n\n.hv-sweep:hover::before {\n  transform: translateX(0);\n}\n\n.hv-sweep:hover {\n  color: #fff;\n}'
+        },
+        "hv-neon": {
+          html: '<div class="hv-neon"><span>Hover để xem</span></div>',
+          css: ':root {\n  --accent: #ff6a3d;\n  --accent-2: #1f9aa8;\n  --stage: #e4dfd6;\n}\n\n.hv-neon {\n  position: relative;\n  z-index: 0;\n  width: 100%;\n  max-width: 160px;\n  padding: 14px 18px;\n  border-radius: 10px;\n  background: var(--stage);\n  color: #8d8378;\n  font-size: 12px;\n  text-align: center;\n}\n\n.hv-neon::before {\n  content: "";\n  position: absolute;\n  inset: -2px;\n  z-index: -1;\n  border-radius: 12px;\n  background: conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent));\n  opacity: 0;\n  animation: hv-neon-spin 2.5s linear infinite;\n  animation-play-state: paused;\n  transition: opacity 0.2s;\n}\n\n.hv-neon:hover::before {\n  opacity: 1;\n  animation-play-state: running;\n}\n\n@keyframes hv-neon-spin {\n  to { transform: rotate(360deg); }\n}'
         }
       };
 
@@ -599,6 +815,83 @@
       }
 
       startPctLoop();
+
+      /* ---------- tabs ---------- */
+      var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+      var panels = {
+        "panel-loading": document.getElementById("panel-loading"),
+        "panel-hover": document.getElementById("panel-hover")
+      };
+
+      function selectTab(tab) {
+        tabs.forEach(function (t) {
+          var active = t === tab;
+          t.setAttribute("aria-selected", String(active));
+          t.tabIndex = active ? 0 : -1;
+        });
+        Object.keys(panels).forEach(function (id) {
+          panels[id].hidden = id !== tab.getAttribute("aria-controls");
+        });
+        tab.focus();
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener("click", function () { selectTab(tab); });
+        tab.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+            var next = e.key === "ArrowRight" ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+            selectTab(tabs[next]);
+          }
+        });
+      });
+
+      /* ---------- hover-effect demos ---------- */
+      var spotlight = document.getElementById("hvSpotlight");
+      spotlight.addEventListener("mousemove", function (e) {
+        var r = spotlight.getBoundingClientRect();
+        spotlight.style.setProperty("--x", (e.clientX - r.left) + "px");
+        spotlight.style.setProperty("--y", (e.clientY - r.top) + "px");
+      });
+
+      var tiltWrap = document.getElementById("hvTiltWrap");
+      var tilt = document.getElementById("hvTilt");
+      tiltWrap.addEventListener("mousemove", function (e) {
+        var r = tiltWrap.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        tilt.style.transform = "rotateX(" + (py * -18) + "deg) rotateY(" + (px * 18) + "deg)";
+      });
+      tiltWrap.addEventListener("mouseleave", function () {
+        tilt.style.transform = "rotateX(0deg) rotateY(0deg)";
+      });
+
+      var magnetStage = document.getElementById("hvMagnetStage");
+      var magnet = document.getElementById("hvMagnet");
+      magnetStage.addEventListener("mousemove", function (e) {
+        var r = magnet.getBoundingClientRect();
+        var cx = r.left + r.width / 2;
+        var cy = r.top + r.height / 2;
+        var dx = (e.clientX - cx) * 0.3;
+        var dy = (e.clientY - cy) * 0.3;
+        magnet.style.transform = "translate(" + dx + "px, " + dy + "px)";
+      });
+      magnetStage.addEventListener("mouseleave", function () {
+        magnet.style.transform = "translate(0, 0)";
+      });
+
+      var rippleBtn = document.getElementById("hvRipple");
+      rippleBtn.addEventListener("click", function (e) {
+        var r = rippleBtn.getBoundingClientRect();
+        var size = Math.max(r.width, r.height) * 2;
+        var dot = document.createElement("span");
+        dot.className = "ripple-dot";
+        dot.style.width = size + "px";
+        dot.style.height = size + "px";
+        dot.style.left = (e.clientX - r.left - size / 2) + "px";
+        dot.style.top = (e.clientY - r.top - size / 2) + "px";
+        rippleBtn.appendChild(dot);
+        dot.addEventListener("animationend", function () { dot.remove(); });
+      });
     })();
   </script>
 
