@@ -13,6 +13,7 @@
   --font-display: "Archivo", "Segoe UI", sans-serif;
   --font-body: "Archivo", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,10 +47,18 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
-/* keep our own colors on buttons/links even under OS/browser forced-colors
-   (Windows high-contrast, "force dark pages") — every control here already
-   has deliberate, accessible contrast of its own */
-button, a { forced-color-adjust: none; }
+/* this page already declares & handles both color schemes itself, so tell
+   the OS/browser not to reprocess it (Windows high-contrast, "force dark
+   pages", etc.) — every control here has deliberate, accessible contrast */
+body { forced-color-adjust: none; }
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
 
 html, body {
   margin: 0;
@@ -110,34 +119,73 @@ h1, h2 { font-family: var(--font-display); margin: 0; text-wrap: balance; }
 .motion-toggle[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #1b1108; }
 
 /* ---------- tabs ---------- */
-.tabs {
+.tabs-wrap {
   max-width: 1120px;
   margin: 0 auto;
-  display: flex;
-  gap: 6px;
-  padding-block: 14px 0;
+  padding-block: 16px 0;
+}
+.tabs {
+  position: relative;
+  display: inline-flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.tab-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 0;
+  border-radius: 100px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 18px 1px color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: left 0.35s cubic-bezier(0.65, 0, 0.35, 1), width 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 0;
 }
 .tab {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 100px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  border: none;
+  background: transparent;
   color: var(--text-dim);
   cursor: pointer;
+  transition: color 0.25s;
+}
+.tab-idx {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  opacity: 0.7;
 }
 .tab:hover { color: var(--text); }
 .tab:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
-.tab[aria-selected="true"] {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
+.tab[aria-selected="true"] { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tab-indicator { transition: none; }
 }
 
 /* ---------- layout ---------- */
 .wrap { max-width: 1120px; margin: 0 auto; }
+
+[role="tabpanel"] { animation: panel-in 0.32s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [role="tabpanel"] { animation: none; }
+}
 
 .category { padding-block: 32px 8px; }
 .category h2 {

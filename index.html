@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   <title>Xưởng Loading</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,9 +23,16 @@
     </button>
   </header>
 
-  <div class="tabs" role="tablist" aria-label="Chuyển nhóm hiệu ứng">
-    <button class="tab" id="tab-loading" role="tab" type="button" aria-selected="true" aria-controls="panel-loading">Hiệu ứng Loading</button>
-    <button class="tab" id="tab-hover" role="tab" type="button" aria-selected="false" aria-controls="panel-hover" tabindex="-1">Hiệu ứng di chuột</button>
+  <div class="tabs-wrap">
+    <div class="tabs" role="tablist" aria-label="Chuyển nhóm hiệu ứng">
+      <span class="tab-indicator" id="tabIndicator" aria-hidden="true"></span>
+      <button class="tab" id="tab-loading" role="tab" type="button" aria-selected="true" aria-controls="panel-loading">
+        <span class="tab-idx">01</span>Hiệu ứng Loading
+      </button>
+      <button class="tab" id="tab-hover" role="tab" type="button" aria-selected="false" aria-controls="panel-hover" tabindex="-1">
+        <span class="tab-idx">02</span>Hiệu ứng di chuột
+      </button>
+    </div>
   </div>
 
   <main class="wrap">
@@ -818,12 +826,18 @@
 
       /* ---------- tabs ---------- */
       var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+      var tabIndicator = document.getElementById("tabIndicator");
       var panels = {
         "panel-loading": document.getElementById("panel-loading"),
         "panel-hover": document.getElementById("panel-hover")
       };
 
-      function selectTab(tab) {
+      function moveIndicator(tab) {
+        tabIndicator.style.left = tab.offsetLeft + "px";
+        tabIndicator.style.width = tab.offsetWidth + "px";
+      }
+
+      function selectTab(tab, focus) {
         tabs.forEach(function (t) {
           var active = t === tab;
           t.setAttribute("aria-selected", String(active));
@@ -832,17 +846,24 @@
         Object.keys(panels).forEach(function (id) {
           panels[id].hidden = id !== tab.getAttribute("aria-controls");
         });
-        tab.focus();
+        moveIndicator(tab);
+        if (focus) tab.focus();
       }
 
       tabs.forEach(function (tab, i) {
-        tab.addEventListener("click", function () { selectTab(tab); });
+        tab.addEventListener("click", function () { selectTab(tab, false); });
         tab.addEventListener("keydown", function (e) {
           if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
             var next = e.key === "ArrowRight" ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
-            selectTab(tabs[next]);
+            selectTab(tabs[next], true);
           }
         });
+      });
+
+      moveIndicator(tabs[0]);
+      window.addEventListener("resize", function () {
+        var current = tabs.filter(function (t) { return t.getAttribute("aria-selected") === "true"; })[0];
+        if (current) moveIndicator(current);
       });
 
       /* ---------- hover-effect demos ---------- */
